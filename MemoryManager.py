@@ -37,7 +37,7 @@ class MemoryManager:
         count = 0
         for i in self.memory:
             if (i == '*'):
-                print('x', end='')
+                print('_', end='')
             else:
                 print(i, end='')
             count += 1

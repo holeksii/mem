@@ -1,6 +1,3 @@
-import sys
-
-
 class Menu:
     help_text = '''Available commands:
     help - show available commands
@@ -15,8 +12,6 @@ class Menu:
 
 
     def run(self):
-              
-        
         exit = False
         option = ''
         while not exit:

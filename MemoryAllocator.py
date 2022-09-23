@@ -6,7 +6,7 @@ class MemoryAllocator:
         self.allocate(num_cells)
 
     def allocate(self, num_cells):
-        self.memory = 'x' * num_cells
         self.pointer = MemoryAllocator.current_pointer
+        self.memory = 'x' * (num_cells - len(str(self.pointer)))
         MemoryAllocator.current_pointer += num_cells
         return self.pointer

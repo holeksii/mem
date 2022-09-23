@@ -27,7 +27,8 @@ class Menu:
                 exit = True
             elif option.split(' ')[0] == 'allocate':
                 try:
-                    self.manager.allocate(int(option.split(' ')[1]))
+                    pointer = self.manager.allocate(int(option.split(' ')[1]))
+                    print(pointer)
                 except Exception as e:
                     print(e)
             elif option.split(' ')[0] == 'free':

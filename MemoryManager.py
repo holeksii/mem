@@ -14,8 +14,10 @@ class MemoryManager:
     def allocate(self, num_cells):
         if num_cells > self.max_cells - self.total_memory_allocated:
             raise Exception('Not enough memory')
+        pointer = MemoryAllocator.current_pointer
         self.memory_list.append(MemoryAllocator(num_cells))
         self.total_memory_allocated += num_cells
+        return pointer
     
     def free(self, pointer):
         for memory in self.memory_list:
